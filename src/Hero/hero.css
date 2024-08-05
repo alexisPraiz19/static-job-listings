@@ -1,0 +1,84 @@
+.hero{
+    position: relative;
+    width: 100vw; height: 120px;
+    margin-bottom: 60px;
+    background: var(--Desaturated-Dark-Cyan) url("../assets/images/bg-header-desktop.svg") no-repeat;
+    background-size: 100%;
+
+    .skills-filter{
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between; align-items: center;
+        width: 76%;  height: max-content;
+        min-height: 52px;
+        padding: 0 30px;
+        background-color: #fff;
+        border-radius: 5px;
+        transform: translate(-50%, 50%) scaleX(0);
+        transition: transform .2s linear;
+
+        .skills{
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .skill{
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                width: max-content;
+                padding-left: 10px;
+                font-weight: 600;
+                color: var(--Desaturated-Dark-Cyan);
+                background-color: var(--Light-Grayish-Cyan);
+                border-radius: 4px;
+                overflow: hidden;
+
+                span{
+                    display: inline-block;
+                    width: 24px; height: 24px;
+                    background: var(--Desaturated-Dark-Cyan) url("../assets/images/icon-remove.svg") no-repeat center;
+                    background-size: 11px;
+
+                    &:hover{ background-color: #000; }
+                }
+            }
+        }
+
+        .clear{
+            text-decoration: underline;
+            color: var(--Desaturated-Dark-Cyan);
+        }
+    }
+
+    .show-filter{ transform: translate(-50%, 50%) scaleX(1); }
+}
+
+
+@media screen and (width <= 1100px){ .hero{ background-size: cover; } }
+
+@media screen and (width <= 800px){ .hero .skills-filter{ width: 85%; } }
+
+@media screen and (width <= 500px){
+    .hero{
+        margin-bottom: 70px;
+        background-image: url("../assets/images/bg-header-mobile.svg"); 
+        
+        .skills-filter{
+            position: static;
+            width: 90%;
+            margin-inline: auto;
+            padding: 20px;
+            gap: 18px;
+            transform: translate(0, 50%);
+
+            .clear{
+                text-decoration: none;
+                color: var(--Dark-Grayish-Cyan);
+            }
+        }
+    }
+}

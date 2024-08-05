@@ -1,0 +1,5 @@
+@import "./general_styles.css";
+@import "./reusable_class.css";
+
+@import "../Hero/hero.css";
+@import "../Main/main.css";
