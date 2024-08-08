@@ -17,7 +17,8 @@
         background-color: #fff;
         border-radius: 5px;
         transform: translate(-50%, 50%) scaleX(0);
-        transition: transform .2s linear;
+        opacity: 0;
+        transition: transform, opacity .1s linear;
 
         .skills{
             display: flex;

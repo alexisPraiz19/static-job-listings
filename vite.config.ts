@@ -3,6 +3,5 @@ import react from '@vitejs/plugin-react-swc'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: "https://alexisPraiz19.github.io/static-job-listings"
+  plugins: [react()]
 })
